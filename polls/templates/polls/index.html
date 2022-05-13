@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Home page</h2>
+    <hr>
+
+    <div class="col-md-4 me-5" style="margin-top: 30px;">
+        <form method="post" action="{% url 'index' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="text_file" class="form-label"><span>Upload Text file</span>
+                        </label>
+            <input type="file" class="form-control" aria-describedby="emailHelp" title="Upload excel file" name="text_file" id="text_file" style="border: 1px solid black; padding: 5px;" required="required">
+            <br>
+
+            <p>
+                <button class="btn btn-primary mt-3">Upload</button>
+        </form>
+    </div>
+</body>
+
+</html>
